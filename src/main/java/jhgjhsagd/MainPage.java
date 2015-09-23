@@ -20,7 +20,7 @@ public class MainPage {
     }
 
     public void openHeaderMenu(String menuName){
-        WebElement menuItem = driver.findElement(By.xpath("//a[text()=' " + menuName + " ' and @class='root-item']"));
+        WebElement menuItem = driver.findElement(By.xpath("//a[text()='" + menuName + "' and contains(@class,'root-item')]"));
 
         Actions action = new Actions(driver);
         action.moveToElement(menuItem).build().perform();
